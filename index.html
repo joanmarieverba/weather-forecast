@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="index.css" rel="stylesheet" />
+  <title>Weather Forecast</title>
+</head>
+<body>
+  <div id="headerTitle">Weather Forecast <span id="weather_place"><span></div>
+
+    <div id="instructions">Enter zip code or city name</div>
+    <div id="inputLine"><input type="text" id="zip"></input><input id="btn" type="button" value="Enter"></input></div>
+<!-- divs next to each other to close up space -->
+    <div id="setColumns">
+      <div class="displayCondition">
+        <h3 id="day0"></h3>
+        <h2 id="high0"></h2>
+        <h2 id="low0"></h2>
+        <img id="weather_img_icon0" width="75px"/>
+        <h3 id="weather_desc0"></h3>
+      </div><div class="displayCondition">
+        <h3 id="day1"></h3>
+        <h2 id="high1"></h2>
+        <h2 id="low1"></h2>
+        <img id="weather_img_icon1" width="75px"/>
+        <h3 id="weather_desc1"></h3>
+      </div><div class="displayCondition">
+        <h3 id="day2"></h3>
+        <h2 id="high2"></h2>
+        <h2 id="low2"></h2>
+        <img id="weather_img_icon2" width="75px"/>
+        <h3 id="weather_desc2"></h3>
+      </div><div class="displayCondition">
+        <h3 id="day3"></h3>
+        <h2 id="high3"></h2>
+        <h2 id="low3"></h2>
+        <img id="weather_img_icon3" width="75px"/>
+        <h3 id="weather_desc3"></h3>
+      </div><div class="displayCondition">
+        <h3 id="day4"></h3>
+        <h2 id="high4"></h2>
+        <h2 id="low4"></h2>
+        <img id="weather_img_icon4" width="75px"/>
+        <h3 id="weather_desc4"></h3>
+      </div><div class="displayCondition">
+        <h3 id="day5"></h3>
+        <h2 id="high5"></h2>
+        <h2 id="low5"></h2>
+        <img id="weather_img_icon5" width="75px"/>
+        <h3 id="weather_desc5"></h3>
+      </div><div class="displayCondition">
+        <h3 id="day6"></h3>
+        <h2 id="high6"></h2>
+        <h2 id="low6"></h2>
+        <img id="weather_img_icon6" width="75px"/>
+        <h3 id="weather_desc6"></h3>
+      </div>
+    </div>
+<!-- Loader placeholder -->
+  <div class="modal"><!-- Place at bottom of page --></div>
+  <script src="index.js"></script>
+</body>
+</html>
