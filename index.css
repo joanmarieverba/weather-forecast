@@ -8,7 +8,7 @@ body {
 /*this is the overall square displayed*/
 .displayCondition {
   font-weight: bold;
-  display: inline-block;
+  display: none;
   padding: 10px;
   width: 10%;
   margin: 0 auto;
@@ -16,7 +16,8 @@ body {
   margin-top: 50px;
   border: 3px solid purple;
   font-family: 'Droid Serif', serif;
-  font-size: 14px;
+  /*font-size: 14px;*/
+  font-size: 1.2vw;
   background-color: antiquewhite;
 }
 
@@ -30,7 +31,7 @@ body {
 }
 
 #day0, #day1, #day2, #day3, #day4, #day5, #day6{
-  font-size: 20px;
+  font-size: 1.7vw;
   display: block;
   margin: 0 auto;
   padding-bottom: 20px;
@@ -74,6 +75,7 @@ body {
 #weather_desc0, #weather_desc1, #weather_desc2, #weather_desc3, #weather_desc4, #weather_desc5, #weather_desc6 {
   display: block;
   margin: 0 auto;
+  font-size: 1.4vw;
   text-align: center;
 }
 
@@ -81,6 +83,12 @@ body {
   display: block;
   margin: 0 auto;
   text-align: center;
+}
+
+@media (max-width: 650px) {
+    #weather_img_icon0, #weather_img_icon1, #weather_img_icon2, #weather_img_icon3, #weather_img_icon4, #weather_img_icon5, #weather_img_icon6 {
+    width: 5vw;
+  }
 }
 
 /* Start by setting display:none to make this hidden.

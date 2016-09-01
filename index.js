@@ -29,6 +29,7 @@ function unixToDay(timestamp) {
 function locationButtonClick (){
   console.log ("button was clicked", $("#zip").val());
   getWeatherData($("#zip").val());
+  $(".displayCondition").css("display", "inline-block");
 }
 
 $("#btn").on("click",locationButtonClick);
@@ -58,7 +59,7 @@ $.ajax({
     var iconUrl = 'http://openweathermap.org/img/w/'+result.list[i].weather[0].icon+'.png';
     $("#weather_img_icon"+int).attr("src", iconUrl);
 
-    var cloudiness = result.list[i].weather[0].main;
+    var cloudiness = result.list[i].weather[0].description;
     $("#weather_desc"+int).text(cloudiness);
 
     var highTemp = kelvinToFahrenheit(result.list[i].temp.max);
