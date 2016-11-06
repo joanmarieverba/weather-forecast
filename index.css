@@ -5,6 +5,20 @@ body {
   padding: 20px;
 }
 
+.cloud {
+  animation: acrosspage 12s ease-in-out infinite;
+  top: 53em;
+}
+
+@keyframes acrosspage {
+  0% {
+    transform: translateX(-10em);
+  }
+  100% {
+    transform: translateX(80em);
+  }
+}
+
 /*this is the overall square displayed*/
 .displayCondition {
   font-weight: bold;
