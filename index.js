@@ -19,9 +19,9 @@ function mpsToMph(mps) {
 
 function unixToDay(timestamp) {
     // multiplied by 1000 so that the argument is in milliseconds, not seconds.
-    var date = new Date(timestamp*1000);
-    var weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    var weekday = weekdays[date.getDay()];
+    let date = new Date(timestamp*1000);
+    let weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let weekday = weekdays[date.getDay()];
     return weekday;
 }
 
@@ -35,7 +35,7 @@ function locationButtonClick (){
 $("#btn").on("click",locationButtonClick);
 
 function getWeatherData (zipCode){
-  var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + zipCode + "&cnt=10&APPID=2ab5a5b18737e945b5af9cae2e8e1ffe";
+  let url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + zipCode + "&cnt=10&APPID=2ab5a5b18737e945b5af9cae2e8e1ffe";
 
 $.ajax({
 
@@ -43,31 +43,31 @@ $.ajax({
   success: function(result){
     console.log(result);
 
-  var cityName = result.city.name;
-  displayCityName = "for " + cityName;
+  let cityName = result.city.name;
+  displayCityName = `for ${cityName}`;
   $("#weather_place").text(displayCityName);
 
 
   for (var i = 0; i < 7; i++) {
 
-    var int = i.toString();
+    let int = i.toString();
 
-    var dayOfWeek = unixToDay(result.list[i].dt);
+    let dayOfWeek = unixToDay(result.list[i].dt);
     console.log ("day ", result.list[i].dt);
     $("#day"+int).text(dayOfWeek);
 
-    var iconUrl = 'http://openweathermap.org/img/w/'+result.list[i].weather[0].icon+'.png';
+    let iconUrl = 'http://openweathermap.org/img/w/'+result.list[i].weather[0].icon+'.png';
     $("#weather_img_icon"+int).attr("src", iconUrl);
 
-    var cloudiness = result.list[i].weather[0].description;
+    let cloudiness = result.list[i].weather[0].description;
     $("#weather_desc"+int).text(cloudiness);
 
-    var highTemp = kelvinToFahrenheit(result.list[i].temp.max);
-    var displayHighTemp = "High " + highTemp + "&#176;F";
+    let highTemp = kelvinToFahrenheit(result.list[i].temp.max);
+    let displayHighTemp = `High ${highTemp}&#176;F`;
     $("#high"+int).html(displayHighTemp);
 
-    var lowTemp = kelvinToFahrenheit(result.list[i].temp.min);
-    var displayLowTemp = "Low " + lowTemp + "&#176;F";
+    let lowTemp = kelvinToFahrenheit(result.list[i].temp.min);
+    let displayLowTemp = `Low ${lowTemp}&#176;F`;
     $("#low"+int).html(displayLowTemp);
 
 
