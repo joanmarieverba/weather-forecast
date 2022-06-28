@@ -35,7 +35,7 @@ function locationButtonClick (){
 $("#btn").on("click",locationButtonClick);
 
 function getWeatherData (zipCode){
-  let url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=" + zipCode + "&cnt=10&APPID=2ab5a5b18737e945b5af9cae2e8e1ffe";
+  let url = "https://api.openweathermap.org/data/2.5/forecast/daily?q=" + zipCode + "&cnt=10&APPID=2ab5a5b18737e945b5af9cae2e8e1ffe";
 
 $.ajax({
 
